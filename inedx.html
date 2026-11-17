@@ -103,8 +103,7 @@ p { margin: 0; }
 .fact .v { font-weight: 600; }
 .fact .k { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; font-family: var(--font-mono); }
 
-.panels { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 20px; margin-top: 40px; }
-@media (max-width: 860px) { .panels { grid-template-columns: 1fr; } }
+.panels { display: grid; gap: 20px; margin-top: 40px; }
 .panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 28px; }
 .panel h3 { font-size: 24px; margin-bottom: 18px; }
 .steps { display: grid; gap: 18px; }
@@ -114,10 +113,6 @@ p { margin: 0; }
 @media (max-width: 520px) { .step { grid-template-columns: 1fr; gap: 2px; } }
 .skills-shown { margin-top: 20px; padding-top: 18px; border-top: 1px dashed var(--line); }
 
-.video { aspect-ratio: 16 / 9; border-radius: 10px; border: 1px dashed var(--line); background: repeating-linear-gradient(135deg, var(--chip) 0 12px, transparent 12px 24px); display: grid; place-items: center; text-align: center; color: var(--muted); padding: 16px; margin-bottom: 16px; }
-.play { width: 52px; height: 52px; border-radius: 50%; background: var(--accent); display: grid; place-items: center; margin: 0 auto 10px; }
-.play::after { content: ""; border-left: 16px solid #fff; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 4px; }
-.links { display: flex; flex-wrap: wrap; gap: 8px; }
 
 /* Mockup frames */
 .mock { background: var(--chip); border-radius: 18px; padding: 28px; display: grid; place-items: center; min-height: 340px; }
@@ -178,17 +173,6 @@ p { margin: 0; }
 .gt .scrub { height: 4px; border-radius: 2px; background: #2A3444; position: relative; }
 .gt .scrub::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 42%; background: #FF7A3D; border-radius: 2px; }
 
-/* Grateful Moments mock */
-.gm { height: 100%; background: linear-gradient(180deg, #FFE3C9 0%, #F7B7A3 40%, #9DB4E6 100%); padding: 30px 12px 14px; display: flex; flex-direction: column; gap: 10px; color: #1E2230; font-family: var(--font-body); }
-.glass { background: rgba(255,255,255,.42); border: 1px solid rgba(255,255,255,.7); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-radius: 18px; padding: 12px; box-shadow: inset 0 1px 0 rgba(255,255,255,.8); }
-.gm .hdr { display: flex; justify-content: space-between; align-items: center; }
-.gm .hdr b { font-family: var(--font-display); font-size: 18px; }
-.gm .streak { font: 600 10.5px var(--font-mono); background: rgba(255,255,255,.6); border-radius: 999px; padding: 3px 8px; }
-.gm .photo { height: 70px; border-radius: 12px; background: linear-gradient(135deg, #5B8DEF, #A6E3E9 60%, #FFF1C1); margin-bottom: 8px; }
-.gm .txt { font-size: 11.5px; line-height: 1.4; }
-.gm .date { font: 10px var(--font-mono); opacity: .6; margin-bottom: 4px; }
-.gm .badges { display: flex; gap: 8px; }
-.gm .badge { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font: 700 11px var(--font-mono); background: rgba(255,255,255,.55); border: 1px solid rgba(255,255,255,.8); }
 
 /* About */
 .about { padding: 72px 0; border-top: 1px solid var(--line); scroll-margin-top: 60px; }
@@ -233,7 +217,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <a href="#widget-factory"><span class="mono idx-num">01</span><span class="idx-title">Material Widget Factory</span><span class="mono idx-meta">Web · GenAI · 2026</span></a>
       <a href="#spotify-browser"><span class="mono idx-num">02</span><span class="idx-title">Spotify Browser</span><span class="mono idx-meta">Angular · Node.js · 2026</span></a>
       <a href="#gametime"><span class="mono idx-num">03</span><span class="idx-title">Gametime</span><span class="mono idx-meta">iOS · SwiftUI · 2026</span></a>
-      <a href="#grateful-moments"><span class="mono idx-num">04</span><span class="idx-title">Grateful Moments</span><span class="mono idx-meta">iOS · SwiftUI · 2026</span></a>
     </div>
   </section>
 
@@ -277,11 +260,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <div class="step"><span class="mono k">Result</span><p>Generated widgets look like they belong to the same design system and adapt to the user’s theme and screen size.</p></div>
         </div>
         <div class="skills-shown"><p class="mono label">Skills shown</p><div class="chips"><span class="chip">Design systems</span><span class="chip">Responsive layout</span><span class="chip">Theming</span><span class="chip">AI integration</span></div></div>
-      </section>
-      <section class="panel">
-        <h3>See it</h3>
-        <div class="video"><div><div class="play" aria-hidden="true"></div><span class="mono">Demo video coming soon</span></div></div>
-        <div class="links"><a class="btn primary" href="#">Live demo</a><a class="btn" href="#">GitHub repo</a></div>
       </section>
     </div>
   </article>
@@ -331,11 +309,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <div class="step"><span class="mono k">Result</span><p>Users sign in once and can move between search results, artist pages and albums without dealing with the API behind it.</p></div>
         </div>
         <div class="skills-shown"><p class="mono label">Skills shown</p><div class="chips"><span class="chip">Angular components</span><span class="chip">API integration</span><span class="chip">Authentication</span><span class="chip">Full-stack thinking</span></div></div>
-      </section>
-      <section class="panel">
-        <h3>See it</h3>
-        <div class="video"><div><div class="play" aria-hidden="true"></div><span class="mono">Demo video coming soon</span></div></div>
-        <div class="links"><a class="btn primary" href="#">GitHub repo</a></div>
       </section>
     </div>
   </article>
@@ -399,58 +372,6 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
           <div class="step"><span class="mono k">Result</span><p>Coaches and players can replay a possession as a clean tactical view instead of scrubbing through shaky footage.</p></div>
         </div>
         <div class="skills-shown"><p class="mono label">Skills shown</p><div class="chips"><span class="chip">Problem solving</span><span class="chip">Data visualization</span><span class="chip">Animation</span><span class="chip">SwiftUI</span></div></div>
-      </section>
-      <section class="panel">
-        <h3>See it</h3>
-        <div class="video"><div><div class="play" aria-hidden="true"></div><span class="mono">Demo video coming soon</span></div></div>
-        <div class="links"><a class="btn primary" href="#">GitHub repo</a><a class="btn" href="#">TestFlight</a></div>
-      </section>
-    </div>
-  </article>
-
-  <!-- 04 Grateful Moments -->
-  <article class="wrap project" id="grateful-moments">
-    <div class="p-head">
-      <span class="mono p-num">04</span>
-      <h2>Grateful Moments</h2>
-      <div class="chips"><span class="chip">SwiftUI</span><span class="chip">SwiftData</span><span class="chip">PhotosUI</span><span class="chip">Liquid Glass</span></div>
-    </div>
-    <div class="overview">
-      <div>
-        <p class="mono label">Elevator pitch</p>
-        <p class="pitch">A gratitude journal that makes the habit stick. Write or snap a moment each day, then build streaks and earn badges.</p>
-        <div class="facts">
-          <div class="fact"><div class="k">Role</div><div class="v">Solo developer</div></div>
-          <div class="fact"><div class="k">Year</div><div class="v">2026</div></div>
-          <div class="fact"><div class="k">Platform</div><div class="v">iOS</div></div>
-          <div class="fact"><div class="k">Focus</div><div class="v">Polish, habit design</div></div>
-        </div>
-      </div>
-      <div class="mock" role="img" aria-label="Mockup: a journal app with a streak counter, a photo entry on a frosted glass card, and achievement badges">
-        <div class="phone"><div class="screen">
-          <div class="gm">
-            <div class="hdr"><b>Today</b><span class="streak">12-day streak</span></div>
-            <div class="glass"><div class="photo"></div><div class="date">NOV 17</div><div class="txt">Sunset walk with friends after finals. Grateful for the people who show up.</div></div>
-            <div class="glass"><div class="date">NOV 16</div><div class="txt">Finally fixed the bug I was stuck on all week.</div></div>
-            <div class="glass"><div class="date">BADGES</div><div class="badges"><span class="badge">7</span><span class="badge">10</span><span class="badge">30</span></div></div>
-          </div>
-        </div></div>
-      </div>
-    </div>
-    <div class="panels">
-      <section class="panel">
-        <h3>What I did: designing for a daily habit</h3>
-        <div class="steps">
-          <div class="step"><span class="mono k">Problem</span><p>Journaling apps are easy to download and easy to forget. The app needed to make writing an entry feel quick and rewarding.</p></div>
-          <div class="step"><span class="mono k">Approach</span><p>I kept entries simple: text plus an optional photo from PhotosUI, saved locally with SwiftData. I added streak tracking and achievement badges to reward coming back, and used Apple’s Liquid Glass style for a modern, layered look.</p></div>
-          <div class="step"><span class="mono k">Result</span><p>Adding an entry takes a few taps, and progress is visible every time the app opens.</p></div>
-        </div>
-        <div class="skills-shown"><p class="mono label">Skills shown</p><div class="chips"><span class="chip">UI polish</span><span class="chip">UX for habits</span><span class="chip">Data persistence</span></div></div>
-      </section>
-      <section class="panel">
-        <h3>See it</h3>
-        <div class="video"><div><div class="play" aria-hidden="true"></div><span class="mono">Demo video coming soon</span></div></div>
-        <div class="links"><a class="btn primary" href="#">GitHub repo</a></div>
       </section>
     </div>
   </article>
